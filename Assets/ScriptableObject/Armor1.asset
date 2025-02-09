@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f55822ad986b4cadaf69eb1c14346b1d, type: 3}
-  m_Name: Armor lvl1
+  m_Script: {fileID: 11500000, guid: 6333eda4c4d2438b8279ac096c675625, type: 3}
+  m_Name: Armor1
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  armor: 0
-  type: 
-  weight: 0
+  icon: {fileID: 5379824893481949807, guid: 0a2443f4cb7910240a861a535e7ddf53, type: 3}
+  value: 3
+  type: 0
+  weight: 1
+  stack: 1

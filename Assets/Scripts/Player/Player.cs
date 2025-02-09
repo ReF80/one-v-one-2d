@@ -1,15 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DefaultNamespace
 {
     public class Player : MonoBehaviour
     {
-        private Health _health;
+        public Health health;
 
         private void Update()
         {
-            if (_health.IsDead)
+            if (health.IsDead)
             {
                 //Die
             }

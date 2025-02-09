@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6333eda4c4d2438b8279ac096c675625, type: 3}
   m_Name: PistolAmmo
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  ammo: 0
-  type: 
-  weight: 0
+  icon: {fileID: 20934021966033004, guid: 012a8a5ebe0178f4aaeffb90fd9c7025, type: 3}
+  value: 0
+  type: 3
+  weight: 0.01
+  stack: 50

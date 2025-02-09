@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6333eda4c4d2438b8279ac096c675625, type: 3}
-  m_Name: Helmet lvl2
+  m_Name: Armor2
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  ammo: 0
-  type: 
-  weight: 0
+  icon: {fileID: 1734083152993632163, guid: 02cc930c1cac0bd448b7ea74e99eb74c, type: 3}
+  value: 10
+  type: 0
+  weight: 10
+  stack: 1

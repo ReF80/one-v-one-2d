@@ -4,11 +4,11 @@ namespace DefaultNamespace
 {
     public class Enemy : MonoBehaviour
     {
-        public Health _health;
+        public Health health;
 
         private void Update()
         {
-            if (_health.IsDead)
+            if (health.IsDead)
             {
                 //Die
             }

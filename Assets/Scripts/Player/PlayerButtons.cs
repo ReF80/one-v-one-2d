@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DefaultNamespace
 {
@@ -7,11 +8,11 @@ namespace DefaultNamespace
         [SerializeField] public int damage;
         [SerializeField] private GameObject panelPistol;
         [SerializeField] private GameObject panelRifle;
-        private Enemy _enemy;
+        //private Fire fire;
 
         public void SelectPistolButton()
         {
-            damage = 3;
+            damage = 5;
             panelPistol.SetActive(true);
             panelRifle.SetActive(false);
         }
@@ -23,10 +24,9 @@ namespace DefaultNamespace
             panelPistol.SetActive(false);
         }
 
-        public void FireButton()
+        public void FireButton(Fire fire)
         {
-            _enemy._health.Remove(damage);
+            fire.TakeDamage(damage);
         }
-
     }
 }
