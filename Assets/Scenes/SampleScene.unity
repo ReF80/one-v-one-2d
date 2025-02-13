@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (7)
@@ -369,6 +373,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (13)
@@ -684,6 +692,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (21)
@@ -783,6 +795,139 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7847163280749065039, guid: da91745824692c643b4975fd9881ea91, type: 3}
   m_PrefabInstance: {fileID: 638824629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &176764991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176764992}
+  - component: {fileID: 176764995}
+  - component: {fileID: 176764994}
+  - component: {fileID: 176764993}
+  m_Layer: 0
+  m_Name: ExitButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &176764992
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176764991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 772478921}
+  m_Father: {fileID: 1837981697}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 132, y: 156}
+  m_SizeDelta: {x: 25.58, y: 25.87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &176764993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176764991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 176764994}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 808404005}
+        m_TargetAssemblyTypeName: DefaultNamespace.ItemInfoButtons, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &176764994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176764991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8113208, g: 0.27171594, b: 0.32013404, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &176764995
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176764991}
+  m_CullTransparentMesh: 1
 --- !u!1 &210939169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1120,7 +1265,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1174,6 +1319,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: df112adde4cfe9944ac318d4697fb59e, type: 2}
   - {fileID: 11400000, guid: a2c3990198b3e464181674577f8bcc43, type: 2}
   - {fileID: 11400000, guid: f015c95312d722d43aaefe14296c7632, type: 2}
+  - {fileID: 11400000, guid: 85b5e0dbdcdda894f8de9015884f7221, type: 2}
+  - {fileID: 11400000, guid: db3e93b36bbc7ee41905d67802b5c853, type: 2}
+  - {fileID: 11400000, guid: d919e62d923507d4681e8fe7d9300439, type: 2}
   slots:
   - {fileID: 1156974882}
   - {fileID: 570157579}
@@ -1355,6 +1503,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (28)
@@ -1627,6 +1779,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (18)
@@ -1766,7 +1922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.14, y: 0}
+  m_AnchoredPosition: {x: 52.14, y: -3}
   m_SizeDelta: {x: 60.96, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332309544
@@ -1782,7 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1823,6 +1979,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (8)
@@ -2134,6 +2294,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (4)
@@ -2344,6 +2508,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (15)
@@ -3030,6 +3198,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (29)
@@ -3141,6 +3313,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (1)
@@ -3258,6 +3434,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (27)
@@ -3364,7 +3544,7 @@ GameObject:
   - component: {fileID: 576620756}
   - component: {fileID: 576620755}
   m_Layer: 0
-  m_Name: Text (Legacy)
+  m_Name: ActionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3402,7 +3582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3411,7 +3591,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3682,6 +3862,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (23)
@@ -4029,7 +4213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4277,6 +4461,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (10)
@@ -4504,6 +4692,85 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7847163280749065039, guid: da91745824692c643b4975fd9881ea91, type: 3}
   m_PrefabInstance: {fileID: 1056348406}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &772478920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772478921}
+  - component: {fileID: 772478923}
+  - component: {fileID: 772478922}
+  m_Layer: 0
+  m_Name: ActionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &772478921
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772478920}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 176764992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &772478922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772478920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: X
+--- !u!222 &772478923
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772478920}
+  m_CullTransparentMesh: 1
 --- !u!224 &789215570 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7847163280749065039, guid: da91745824692c643b4975fd9881ea91, type: 3}
@@ -4595,6 +4862,7 @@ GameObject:
   - component: {fileID: 808404002}
   - component: {fileID: 808404004}
   - component: {fileID: 808404003}
+  - component: {fileID: 808404005}
   m_Layer: 0
   m_Name: ItemPanel
   m_TagString: Untagged
@@ -4660,6 +4928,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808404001}
   m_CullTransparentMesh: 1
+--- !u!114 &808404005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808404001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4343cc7aa2647be974f7881fde94812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 808404001}
 --- !u!1 &811176786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,7 +5122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.56, y: -3.761}
+  m_AnchoredPosition: {x: 0.56, y: -3.8}
   m_SizeDelta: {x: 0.27, y: 0.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845115374
@@ -4894,6 +5175,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (16)
@@ -5107,7 +5392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -99}
+  m_AnchoredPosition: {x: 28, y: -98}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952531766
@@ -5130,7 +5415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8770154588784826387, guid: 1b1074687278442419eb38696bf1a8ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5358,6 +5643,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (19)
@@ -5464,6 +5753,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (6)
@@ -5558,6 +5851,58 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7847163280749065039, guid: da91745824692c643b4975fd9881ea91, type: 3}
   m_PrefabInstance: {fileID: 968829436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &981013041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981013043}
+  - component: {fileID: 981013042}
+  m_Layer: 0
+  m_Name: ItemInfoPanelContreoller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &981013042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981013041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2110ddc5aa4b26bdf1f9b2f6aa3418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonActionText: 
+  panel: {fileID: 808404001}
+  image: {fileID: 1788598019}
+  imageAtribute: {fileID: 210939171}
+  buttonText: {fileID: 576620755}
+  textWeight: {fileID: 332309544}
+  textName: {fileID: 1636765375}
+  textValue: {fileID: 1874866508}
+--- !u!4 &981013043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981013041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.363699, y: -0.5870383, z: -19.429506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993886401
 GameObject:
   m_ObjectHideFlags: 0
@@ -5696,6 +6041,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (14)
@@ -6165,6 +6514,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (25)
@@ -6405,6 +6758,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (3)
@@ -7136,6 +7493,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (22)
@@ -7558,6 +7919,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (24)
@@ -8267,6 +8632,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (5)
@@ -8512,6 +8881,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (17)
@@ -8656,7 +9029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8820,6 +9193,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (26)
@@ -9398,7 +9775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9472,8 +9849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 23}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 1.27, y: 23.86}
+  m_SizeDelta: {x: 149.54, y: 159.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788598019
 MonoBehaviour:
@@ -9495,7 +9872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1734083152993632163, guid: 02cc930c1cac0bd448b7ea74e99eb74c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9525,6 +9902,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (2)
@@ -10099,6 +10480,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 993886402}
+  - {fileID: 176764992}
   - {fileID: 373909191}
   - {fileID: 1636765374}
   - {fileID: 1788598018}
@@ -10362,7 +10744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10793,6 +11175,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (11)
@@ -11016,6 +11402,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (20)
@@ -11164,15 +11554,15 @@ RectTransform:
   m_GameObject: {fileID: 2022377145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 6.844688, z: 1}
+  m_LocalScale: {x: 1, y: 7.9569497, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 317565993}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: 0.008178711}
-  m_SizeDelta: {x: 4.07, y: -561.01}
+  m_AnchoredPosition: {x: 1, y: -0.0077209473}
+  m_SizeDelta: {x: 4.07, y: -594.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022377147
 MonoBehaviour:
@@ -11444,6 +11834,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (9)
@@ -11695,6 +12089,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot (12)
@@ -12046,7 +12444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.8750005, y: -4.101072}
+  m_AnchoredPosition: {x: -0.8750005, y: -4.37}
   m_SizeDelta: {x: 0.27, y: 0.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143013577
@@ -12099,6 +12497,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 281805486}
+    - target: {fileID: -6066123450082974293, guid: da91745824692c643b4975fd9881ea91, type: 3}
+      propertyPath: itemInfoPanel
+      value: 
+      objectReference: {fileID: 981013042}
     - target: {fileID: 91602502485203430, guid: da91745824692c643b4975fd9881ea91, type: 3}
       propertyPath: m_Name
       value: Slot
@@ -12204,3 +12606,4 @@ SceneRoots:
   - {fileID: 281805487}
   - {fileID: 1689374380}
   - {fileID: 1824478578}
+  - {fileID: 981013043}

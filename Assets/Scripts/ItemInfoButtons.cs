@@ -5,6 +5,7 @@ namespace DefaultNamespace
 {
     public class ItemInfoButtons : MonoBehaviour
     {
+        [SerializeField] public GameObject panel;
         private void Update()
         {
             
@@ -15,9 +16,14 @@ namespace DefaultNamespace
             
         }
 
-        public void Action()
+        public void ActionButton()
         {
             
+        }
+
+        public void ExitButton()
+        {
+            panel.SetActive(false);
         }
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6333eda4c4d2438b8279ac096c675625, type: 3}
-  m_Name: PistolAmmo
+  m_Name: Medkit
   m_EditorClassIdentifier: 
-  icon: {fileID: 20934021966033004, guid: 012a8a5ebe0178f4aaeffb90fd9c7025, type: 3}
-  iconAtribute: {fileID: -2815463901109386322, guid: c2b1681c639a08044a8cf8515069a641, type: 3}
-  value: 0
-  type: 3
-  weight: 0.01
-  stack: 50
+  icon: {fileID: -8902570752444273325, guid: 384d8302094a40a48ac9d7845887c15b, type: 3}
+  iconAtribute: {fileID: 355187970672518847, guid: 9535d2a97ca277240acceb1b6a4c285e, type: 3}
+  value: 50
+  type: 2
+  weight: 1
+  stack: 6

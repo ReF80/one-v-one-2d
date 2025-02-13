@@ -8,7 +8,7 @@ public class DragAndDrop : MonoBehaviour
     public static DragAndDrop Instance;
 
     private ItemSlot draggedSlot;
-    private GameObject dragIcon; // Клон иконки для перетаскивания
+    private GameObject dragIcon; 
     private Canvas canvas;
     private RectTransform canvasRect;
     private void Awake()
@@ -63,14 +63,12 @@ public class DragAndDrop : MonoBehaviour
             }
         }
 
-        // Если найден целевой слот, меняем предметы местами
         if (targetSlot != null)
         {
             draggedSlot.inventory.SwapItems(draggedSlot, targetSlot);
         }
         else
         {
-            // Если целевой слот не найден, возвращаем предмет обратно
             draggedSlot.SetItem(draggedSlot.item);
         }
 
@@ -81,12 +79,11 @@ public class DragAndDrop : MonoBehaviour
     {
         Vector2 localPosition;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect, // RectTransform канваса
-                screenPosition, // Позиция курсора на экране
-                canvas.worldCamera, // Камера канваса (обычно null для Screen Space - Overlay)
-                out localPosition)) // Выходные локальные координаты
+                canvasRect, 
+                screenPosition, 
+                canvas.worldCamera,
+                out localPosition)) 
         {
-            // Устанавливаем позицию клона в локальных координатах канваса
             dragIcon.transform.localPosition = localPosition;
         }
     }

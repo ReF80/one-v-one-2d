@@ -1,15 +1,20 @@
+using System.Collections;
 using DefaultNamespace;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
+public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     public InventorySystem inventory;
     public ItemInfoPanel itemInfoPanel;
     public ItemData item; 
-    public Image iconImage; 
+    public Image iconImage;
+    private const float holdThreshold = 0.5f;
+    private Coroutine holdCoroutine; 
+    private bool isDragging = false;
+    private bool hasDragged = false;
 
     public void SetItem(ItemData newItem)
     {
@@ -30,19 +35,50 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        holdCoroutine = StartCoroutine(TrackHold());
+    }
+    
+    public void OnDrag(PointerEventData eventData)
+    {
+        if(hasDragged) return;
+        hasDragged = true;
         DragAndDrop.Instance.StartDragging(this);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        DragAndDrop.Instance.EndDragging(this);
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (eventData.clickCount == 1 && item != null) 
+        
+        if (holdCoroutine != null)
+        {
+            StopCoroutine(holdCoroutine);
+            holdCoroutine = null;
+        }
+        if (!isDragging)
         {
             itemInfoPanel.OpenItemInfoPanel(this);
+        }
+        else
+        {
+            DragAndDrop.Instance.EndDragging(this);
+        }
+        isDragging = false;
+        hasDragged = false;
+    }
+    
+    private IEnumerator TrackHold()
+    {
+        float holdTime = 0f;
+
+        while (true)
+        {
+            yield return null; 
+            holdTime += Time.unscaledDeltaTime;
+            
+            if (holdTime >= holdThreshold)
+            {
+                isDragging = true;
+                break;
+            }
         }
     }
 }

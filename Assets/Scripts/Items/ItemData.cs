@@ -5,6 +5,7 @@ using UnityEngine;
     public class ItemData : ScriptableObject, IItem
     {
         [SerializeField] public Sprite icon;
+        [SerializeField] public Sprite iconAtribute;
         [SerializeField] public int value;
         [SerializeField] public ItemType type;
         [SerializeField] public float weight;

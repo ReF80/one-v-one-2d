@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6333eda4c4d2438b8279ac096c675625, type: 3}
-  m_Name: PistolAmmo
+  m_Name: Helmet1
   m_EditorClassIdentifier: 
-  icon: {fileID: 20934021966033004, guid: 012a8a5ebe0178f4aaeffb90fd9c7025, type: 3}
-  iconAtribute: {fileID: -2815463901109386322, guid: c2b1681c639a08044a8cf8515069a641, type: 3}
-  value: 0
-  type: 3
-  weight: 0.01
-  stack: 50
+  icon: {fileID: 4130640169021434097, guid: f36401237d69f7442a68553b867811ee, type: 3}
+  iconAtribute: {fileID: 401222690568482209, guid: d58fc1c50329c934f92378504e69f3e9, type: 3}
+  value: 3
+  type: 1
+  weight: 0.1
+  stack: 1

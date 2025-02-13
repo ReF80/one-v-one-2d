@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Armor1
   m_EditorClassIdentifier: 
   icon: {fileID: 5379824893481949807, guid: 0a2443f4cb7910240a861a535e7ddf53, type: 3}
+  iconAtribute: {fileID: -6407990285530103448, guid: 91924012561643c49ae77024697e70dd, type: 3}
   value: 3
   type: 0
   weight: 1
