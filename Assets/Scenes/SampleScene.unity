@@ -5087,7 +5087,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 422696397}
-  healthBar: {fileID: 1689374379}
+  player: {fileID: 1862103405}
+  enemyBar: {fileID: 1689374379}
+  playerBar: {fileID: 1824478577}
+  enemyDamage: 15
 --- !u!1 &845115372
 GameObject:
   m_ObjectHideFlags: 0

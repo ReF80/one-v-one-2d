@@ -10,10 +10,10 @@ namespace DefaultNamespace
         [SerializeField] private Text text;
         [SerializeField] public Player player;
 
-        public void HealthBar()
+        public void HealthController(float value,float maxValue)
         {
-            bar.fillAmount = player.health.Value / player.health.MaxValue;
-            text.text = player.health.Value.ToString(CultureInfo.InvariantCulture);
+            bar.fillAmount = value / maxValue;
+            text.text = value.ToString(CultureInfo.InvariantCulture);
         }
     }
 }
