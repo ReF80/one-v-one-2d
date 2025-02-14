@@ -31,13 +31,13 @@ public class DragAndDrop : MonoBehaviour
         GetWorldPosition(Input.mousePosition);
     }
 
-    private void Update()
-    {
-        if (dragIcon != null)
-        {
-            GetWorldPosition(Input.mousePosition);
-        }
-    }
+    // private void Update()
+    // {
+    //     if (dragIcon != null)
+    //     {
+    //         GetWorldPosition(Input.mousePosition);
+    //     }
+    // }
     
     public void EndDragging(ItemSlot targetSlot)
     {
@@ -73,9 +73,9 @@ public class DragAndDrop : MonoBehaviour
         }
 
         draggedSlot = null;
-    }
+    } 
     
-    private void GetWorldPosition(Vector3 screenPosition)
+    public void GetWorldPosition(Vector3 screenPosition)
     {
         Vector2 localPosition;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(

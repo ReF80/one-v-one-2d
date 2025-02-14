@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Helmet1
   m_EditorClassIdentifier: 
   icon: {fileID: 4130640169021434097, guid: f36401237d69f7442a68553b867811ee, type: 3}
-  iconAtribute: {fileID: 401222690568482209, guid: d58fc1c50329c934f92378504e69f3e9, type: 3}
+  iconAtribute: {fileID: 21300000, guid: d58fc1c50329c934f92378504e69f3e9, type: 3}
   value: 3
   type: 1
   weight: 0.1

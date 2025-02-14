@@ -28,7 +28,7 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
-    private void GenerateRandomItems(int count)
+    public void GenerateRandomItems(int count)
     {
         for (int i = 0; i < count; i++)
         {

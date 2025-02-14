@@ -1,30 +1,30 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace DefaultNamespace
 {
-    public class Armor
+    public class Armor : MonoBehaviour
     {
         [SerializeField] public Text HeadText;
         [SerializeField] public Text BodyText;
-        [SerializeField] public int HeadArmor = 0;
-        [SerializeField] public int BodyArmor = 0;
-        public bool HasHeadArmor = false;
-        public bool HasBodyArmor = false;
-        
-        
+        [SerializeField] public int headArmor = 0;
+        [SerializeField] public int bodyArmor = 0;
+        public bool hasHeadArmor = false;
+        public bool hasBodyArmor = false;
         
         public void PutOn(int value, string type)
         {
             switch (type)
             {
                 case "Helmet":
-                    HeadArmor += value;
-                    HeadText.text = HeadArmor.ToString();
+                    headArmor += value;
+                    HeadText.text = headArmor.ToString();
                     break;
                 case "Armor":
-                    BodyArmor += value;
-                    BodyText.text = BodyArmor.ToString();
+                    bodyArmor += value;
+                    BodyText.text = bodyArmor.ToString();
                     break;
             }
         }
@@ -34,11 +34,11 @@ namespace DefaultNamespace
             switch (type)
             {
                 case "Helmet":
-                    HeadArmor -= value;
+                    headArmor -= value;
                     HeadText.text = "0";
                     break;
                 case "Armor":
-                    BodyArmor -= value;
+                    bodyArmor -= value;
                     BodyText.text = "0";
                     break;
             }

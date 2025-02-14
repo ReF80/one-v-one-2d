@@ -5,16 +5,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+public class ItemSlot : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragHandler, IPointerClickHandler//IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     public InventorySystem inventory;
     public ItemInfoPanel itemInfoPanel;
     public ItemData item; 
     public Image iconImage;
-    private const float holdThreshold = 0.5f;
-    private Coroutine holdCoroutine; 
-    private bool isDragging = false;
-    private bool hasDragged = false;
 
     public void SetItem(ItemData newItem)
     {
@@ -32,53 +28,33 @@ public class ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
             iconImage.GetComponent<Image>().color = new Color32(255,255,225,0);
         }
     }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        holdCoroutine = StartCoroutine(TrackHold());
-    }
     
-    public void OnDrag(PointerEventData eventData)
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        if(hasDragged) return;
-        hasDragged = true;
         DragAndDrop.Instance.StartDragging(this);
     }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        
-        if (holdCoroutine != null)
-        {
-            StopCoroutine(holdCoroutine);
-            holdCoroutine = null;
-        }
-        if (!isDragging)
-        {
-            itemInfoPanel.OpenItemInfoPanel(this);
-        }
-        else
-        {
-            DragAndDrop.Instance.EndDragging(this);
-        }
-        isDragging = false;
-        hasDragged = false;
-    }
     
-    private IEnumerator TrackHold()
+    public void OnEndDrag(PointerEventData eventData)
     {
-        float holdTime = 0f;
+        DragAndDrop.Instance.EndDragging(this);
+    }
 
-        while (true)
-        {
-            yield return null; 
-            holdTime += Time.unscaledDeltaTime;
-            
-            if (holdTime >= holdThreshold)
-            {
-                isDragging = true;
-                break;
-            }
-        }
+    public void OnDrag(PointerEventData eventData)
+    {
+        // Vector2 localPosition;
+        // if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+        //         canvasRect, 
+        //         screenPosition, 
+        //         canvas.worldCamera,
+        //         out localPosition)) 
+        // {
+        //     DragAndDrop.Instance.dragIcon.transform.localPosition = localPosition;
+        // }
+        DragAndDrop.Instance.GetWorldPosition(Input.mousePosition);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        itemInfoPanel.OpenItemInfoPanel(this);
     }
 }

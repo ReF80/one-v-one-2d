@@ -15,6 +15,7 @@ public class Health
     public float MinValue { get; set; } = 0f;
 
     public bool IsDead;
+    public event Action OnDeath;
         
     public void Add(float amount)
     {
@@ -32,6 +33,7 @@ public class Health
         if (newValue < MinValue)
         {
             IsDead = true;
+            OnDeath?.Invoke();
         }
         Value = newValue;
     }

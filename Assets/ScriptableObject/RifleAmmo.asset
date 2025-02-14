@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RifleAmmo
   m_EditorClassIdentifier: 
   icon: {fileID: 390980737271125150, guid: 65227eb0af2fe6e488ee0cb0199694e2, type: 3}
-  iconAtribute: {fileID: -2815463901109386322, guid: c2b1681c639a08044a8cf8515069a641, type: 3}
+  iconAtribute: {fileID: 21300000, guid: c2b1681c639a08044a8cf8515069a641, type: 3}
   value: 0
   type: 3
   weight: 0.03
