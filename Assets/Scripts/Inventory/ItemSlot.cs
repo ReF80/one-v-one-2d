@@ -41,15 +41,6 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragH
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Vector2 localPosition;
-        // if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-        //         canvasRect, 
-        //         screenPosition, 
-        //         canvas.worldCamera,
-        //         out localPosition)) 
-        // {
-        //     DragAndDrop.Instance.dragIcon.transform.localPosition = localPosition;
-        // }
         DragAndDrop.Instance.GetWorldPosition(Input.mousePosition);
     }
 

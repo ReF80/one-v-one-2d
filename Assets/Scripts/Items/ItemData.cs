@@ -9,7 +9,8 @@ using UnityEngine;
         [SerializeField] public int value;
         [SerializeField] public ItemType type;
         [SerializeField] public float weight;
-        [SerializeField] public float stack;
+        [SerializeField] public int stack;
+        [SerializeField] public int maxStack;
         
         public Sprite Icon => icon;
 

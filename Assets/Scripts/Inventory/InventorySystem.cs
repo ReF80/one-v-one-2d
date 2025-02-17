@@ -52,7 +52,15 @@ public class InventorySystem : MonoBehaviour
     public void SwapItems(ItemSlot slotA, ItemSlot slotB)
     {
         ItemData temp = slotA.item;
+        // if (slotA.item.type == slotB.item.type && slotA.item.stack + slotB.item.stack < slotB.item.maxStack)
+        // {
+        //     slotB.SetItem(temp);
+        //     slotB.item.stack += temp.stack;
+        // }
+        // else
+        // {
         slotA.SetItem(slotB.item);
         slotB.SetItem(temp);
+        //}
     }
 }

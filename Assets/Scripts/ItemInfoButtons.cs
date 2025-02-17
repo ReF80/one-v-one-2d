@@ -6,11 +6,7 @@ namespace DefaultNamespace
     public class ItemInfoButtons : MonoBehaviour
     {
         [SerializeField] public GameObject panel;
-        private void Update()
-        {
-            
-        }
-
+        
         public void DeletButton()
         {
             

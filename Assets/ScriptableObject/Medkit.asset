@@ -17,4 +17,5 @@ MonoBehaviour:
   value: 50
   type: 2
   weight: 1
-  stack: 6
+  stack: 1
+  maxStack: 6

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class Health
@@ -8,14 +9,16 @@ public class Health
     public float Value { get; private set; } = 100f;
         
     [field: SerializeField]
-    [field: Range(0.01f, 1000f)]
+    [field: Range(0.01f, 100f)]
     public float MaxValue { get; set; } = 100f;
         
     [field: SerializeField]
     public float MinValue { get; set; } = 0f;
 
     public bool IsDead;
-    public event Action OnDeath;
+
+    public delegate void Respawn();
+    public event Respawn OnDeath;
         
     public void Add(float amount)
     {
@@ -35,6 +38,11 @@ public class Health
             IsDead = true;
             OnDeath?.Invoke();
         }
-        Value = newValue;
+        else
+        {
+            Value = newValue;
+        }
     }
+
+    public void SetMaxValue() => Value = MaxValue;
 }

@@ -30,14 +30,6 @@ public class DragAndDrop : MonoBehaviour
         dragIcon.AddComponent<Image>().sprite = draggedSlot.item.icon;
         GetWorldPosition(Input.mousePosition);
     }
-
-    // private void Update()
-    // {
-    //     if (dragIcon != null)
-    //     {
-    //         GetWorldPosition(Input.mousePosition);
-    //     }
-    // }
     
     public void EndDragging(ItemSlot targetSlot)
     {

@@ -16,7 +16,7 @@ public class Fire : MonoBehaviour
         {
             enemy.health.Remove(damage);
             enemyBar.HealthController(enemy.health.Value, enemy.health.MaxValue);
-            //StartCoroutine(TakeDamagePlayer());
+            StartCoroutine(TakeDamagePlayer());
         }
 
         private IEnumerator TakeDamagePlayer()

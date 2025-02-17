@@ -18,3 +18,4 @@ MonoBehaviour:
   type: 1
   weight: 0.1
   stack: 1
+  maxStack: 1

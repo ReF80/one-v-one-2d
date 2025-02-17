@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,12 +8,14 @@ namespace DefaultNamespace
     {
         public Health health;
 
-        private void Update()
+        private void Start()
         {
-            if (health.IsDead)
-            {
-                SceneManager.LoadScene("Main Menu");
-            }
+            health.OnDeath += Gameover;
+        }
+
+        private void Gameover()
+        {
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
