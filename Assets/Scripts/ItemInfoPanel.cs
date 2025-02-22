@@ -1,12 +1,13 @@
+using System;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace DefaultNamespace
 {
     public class ItemInfoPanel : MonoBehaviour
     {
-        [SerializeField] private string buttonActionText;
         [SerializeField] public GameObject panel;
         [SerializeField] public Image image;
         [SerializeField] public Image imageAtribute;
@@ -14,38 +15,57 @@ namespace DefaultNamespace
         [SerializeField] public Text textWeight;
         [SerializeField] public Text textName;
         [SerializeField] public Text textValue;
-        public void OpenItemInfoPanel(ItemSlot slot)
+        public Player player;
+        public ItemInfoButtons itemInfoButtons;
+        public ItemData itemData;
+        public ItemSlot itemSlot;
+        
+        public void OpenItemInfoPanel(ItemData item, ItemSlot slot)
         {
-            switch (slot.item.type)
+            switch (itemData.type)
             {
                 case ItemData.ItemType.Ammo:
-                    buttonActionText = "Купить";
-                    CreatePanel(buttonActionText, slot);
+                    itemInfoButtons.OnClick += ActionAmmo;
                     break;
                 case ItemData.ItemType.Armor:
-                    buttonActionText = "Экипировать";
-                    CreatePanel(buttonActionText, slot);
+                    itemInfoButtons.OnClick += ActionArmorAndHelmet;
                     break;
                 case ItemData.ItemType.Medkit:
-                    buttonActionText = "Лечить";
-                    CreatePanel(buttonActionText, slot);
+                    itemInfoButtons.OnClick += ActionMedkit;
                     break;
                 case ItemData.ItemType.Helmet:
-                    buttonActionText = "Экипировать";
-                    CreatePanel(buttonActionText, slot);
+                    itemInfoButtons.OnClick += ActionArmorAndHelmet;
                     break;
             }
+            itemData = item;
+            itemSlot = slot;
+            CreatePanel(item);
         }
 
-        private void CreatePanel(string actionText, ItemSlot slot)
+        private void CreatePanel(ItemData item)
         {
             panel.SetActive(true);
-            buttonText.text = actionText;
-            image.sprite = slot.item.icon;
-            imageAtribute.sprite = slot.item.iconAtribute;
-            textName.text = slot.item.name;
-            textWeight.text = slot.item.weight.ToString(CultureInfo.CurrentCulture);
-            textValue.text = slot.item.value.ToString();
+            buttonText.text = item.btnAction;
+            image.sprite = item.icon;
+            imageAtribute.sprite = item.iconAtribute;
+            textName.text = item.name;
+            textWeight.text = item.weight.ToString(CultureInfo.CurrentCulture);
+            textValue.text = item.value.ToString();
+        }
+        
+        private void ActionAmmo()
+        {
+            
+        }
+
+        private void ActionArmorAndHelmet()
+        {
+            player.armor.PutOn(itemData.value, itemData.type);
+        }
+
+        private void ActionMedkit()
+        {
+            player.health.Add(itemData.value);
         }
     }
 }

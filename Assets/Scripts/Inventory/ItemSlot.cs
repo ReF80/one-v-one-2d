@@ -28,10 +28,18 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragH
             iconImage.GetComponent<Image>().color = new Color32(255,255,225,0);
         }
     }
+
+    public void RemoveItem()
+    {
+        iconImage.sprite = null;
+        iconImage.enabled = true;
+        iconImage.GetComponent<Image>().color = new Color32(255,255,225,0);
+    }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
         DragAndDrop.Instance.StartDragging(this);
+        iconImage.sprite = null;
     }
     
     public void OnEndDrag(PointerEventData eventData)
@@ -46,6 +54,6 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragH
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        itemInfoPanel.OpenItemInfoPanel(this);
+        itemInfoPanel.OpenItemInfoPanel(item, this);
     }
 }

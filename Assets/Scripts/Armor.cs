@@ -5,43 +5,36 @@ using UnityEngine.UI;
 
 namespace DefaultNamespace
 {
-    public class Armor : MonoBehaviour
+    public class Armor 
     {
-        [SerializeField] public Text HeadText;
-        [SerializeField] public Text BodyText;
-        [SerializeField] public int headArmor = 0;
-        [SerializeField] public int bodyArmor = 0;
-        public bool hasHeadArmor = false;
-        public bool hasBodyArmor = false;
+        public Text HeadText; 
+        public Text BodyText; 
+        public int headArmor { get; private set; } = 0;
+        public int bodyArmor { get; private set; } = 0;
         
-        public void PutOn(int value, string type)
+        public void PutOn(int value, ItemData.ItemType type)
         {
             switch (type)
             {
-                case "Helmet":
-                    headArmor += value;
-                    HeadText.text = headArmor.ToString();
+                case ItemData.ItemType.Helmet:
+                    HeadArmor(value);
                     break;
-                case "Armor":
-                    bodyArmor += value;
-                    BodyText.text = bodyArmor.ToString();
+                case ItemData.ItemType.Armor:
+                    BodyArmor(value);
                     break;
             }
         }
 
-        public void TakeOff(int value, string type)
+        private void HeadArmor(int value)
         {
-            switch (type)
-            {
-                case "Helmet":
-                    headArmor -= value;
-                    HeadText.text = "0";
-                    break;
-                case "Armor":
-                    bodyArmor -= value;
-                    BodyText.text = "0";
-                    break;
-            }
+            headArmor = value;
+            HeadText.text = headArmor.ToString();
+        }
+
+        private void BodyArmor(int value)
+        {
+            bodyArmor = value;
+            BodyText.text = bodyArmor.ToString();
         }
     }
 }

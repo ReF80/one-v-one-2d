@@ -11,6 +11,7 @@ using UnityEngine;
         [SerializeField] public float weight;
         [SerializeField] public int stack;
         [SerializeField] public int maxStack;
+        [SerializeField] public string btnAction;
         
         public Sprite Icon => icon;
 

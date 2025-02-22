@@ -7,6 +7,8 @@ namespace DefaultNamespace
     public class Player : MonoBehaviour
     {
         public Health health;
+        public Armor armor;
+        
 
         private void Start()
         {

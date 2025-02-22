@@ -5125,7 +5125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 422696397}
   player: {fileID: 1862103405}
-  armor: {fileID: 1862103406}
   enemyBar: {fileID: 1689374379}
   playerBar: {fileID: 1824478577}
   enemyDamage: 15
@@ -5926,7 +5925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2110ddc5aa4b26bdf1f9b2f6aa3418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonActionText: 
   panel: {fileID: 808404001}
   image: {fileID: 1788598019}
   imageAtribute: {fileID: 210939171}
@@ -5934,6 +5932,10 @@ MonoBehaviour:
   textWeight: {fileID: 332309544}
   textName: {fileID: 1636765375}
   textValue: {fileID: 1874866508}
+  player: {fileID: 0}
+  itemInfoButtons: {fileID: 0}
+  itemData: {fileID: 0}
+  itemSlot: {fileID: 0}
 --- !u!4 &981013043
 Transform:
   m_ObjectHideFlags: 0
