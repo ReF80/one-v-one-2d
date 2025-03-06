@@ -2248,7 +2248,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 373909193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 808404005}
+        m_TargetAssemblyTypeName: DefaultNamespace.ItemInfoButtons, Assembly-CSharp
+        m_MethodName: DeletButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &373909193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5313,6 +5325,52 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7847163280749065039, guid: da91745824692c643b4975fd9881ea91, type: 3}
   m_PrefabInstance: {fileID: 885890501}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &890837196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890837198}
+  - component: {fileID: 890837197}
+  m_Layer: 0
+  m_Name: PlayerArmorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &890837197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890837196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e341f149e8ae4cffa4ce90da2fcd0898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeadText: {fileID: 367789160}
+  BodyText: {fileID: 1543839751}
+--- !u!4 &890837198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890837196}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.18257251, y: -0.23936456, z: 0.66774714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &899305139 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7847163280749065039, guid: da91745824692c643b4975fd9881ea91, type: 3}
@@ -5906,6 +5964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981013043}
   - component: {fileID: 981013042}
+  - component: {fileID: 981013044}
   m_Layer: 0
   m_Name: ItemInfoPanelContreoller
   m_TagString: Untagged
@@ -5925,15 +5984,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2110ddc5aa4b26bdf1f9b2f6aa3418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 808404001}
-  image: {fileID: 1788598019}
-  imageAtribute: {fileID: 210939171}
-  buttonText: {fileID: 576620755}
-  textWeight: {fileID: 332309544}
-  textName: {fileID: 1636765375}
-  textValue: {fileID: 1874866508}
-  player: {fileID: 0}
-  itemInfoButtons: {fileID: 0}
+  createPanel: {fileID: 981013044}
+  player: {fileID: 1862103405}
+  armorController: {fileID: 890837197}
+  itemInfoButtons: {fileID: 808404005}
   itemData: {fileID: 0}
   itemSlot: {fileID: 0}
 --- !u!4 &981013043
@@ -5951,6 +6005,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981013044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981013041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e166646ccd46598219167c855599ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 808404001}
+  imageItem: {fileID: 1788598019}
+  imageAtribute: {fileID: 210939171}
+  buttonText: {fileID: 576620755}
+  textWeight: {fileID: 332309544}
+  textName: {fileID: 1636765375}
+  textValue: {fileID: 1874866508}
 --- !u!1 &993886401
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,7 +6106,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 993886404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 808404005}
+        m_TargetAssemblyTypeName: DefaultNamespace.ItemInfoButtons, Assembly-CSharp
+        m_MethodName: ActionButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &993886404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10750,7 +10835,6 @@ GameObject:
   - component: {fileID: 1862103405}
   - component: {fileID: 1862103404}
   - component: {fileID: 1862103403}
-  - component: {fileID: 1862103406}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10833,24 +10917,9 @@ MonoBehaviour:
     <MaxValue>k__BackingField: 100
     <MinValue>k__BackingField: 0
     IsDead: 0
---- !u!114 &1862103406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862103401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443d0be3592d439bb4d8b47a31432ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeadText: {fileID: 367789160}
-  BodyText: {fileID: 1543839751}
-  headArmor: 0
-  bodyArmor: 0
-  hasHeadArmor: 0
-  hasBodyArmor: 0
+  armor:
+    <headArmor>k__BackingField: 0
+    <bodyArmor>k__BackingField: 0
 --- !u!1 &1874866506
 GameObject:
   m_ObjectHideFlags: 0
@@ -12784,3 +12853,4 @@ SceneRoots:
   - {fileID: 1689374380}
   - {fileID: 1824478578}
   - {fileID: 981013043}
+  - {fileID: 890837198}

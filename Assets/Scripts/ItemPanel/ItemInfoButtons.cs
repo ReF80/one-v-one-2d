@@ -8,7 +8,12 @@ namespace DefaultNamespace
         [SerializeField] public GameObject panel;
         private Player player;
         private ItemInfoPanel item;
-        
+        private ItemSlot thisSlot;
+        public void Initialize(ItemSlot slot)
+        {
+            thisSlot = slot;
+        }
+
         public event Action OnClick;
         
         public void ActionButton()
@@ -18,7 +23,7 @@ namespace DefaultNamespace
         
         public void DeletButton()
         {
-            item.itemSlot.RemoveItem();
+            thisSlot.RemoveItem();
         }
         
         public void ExitButton()

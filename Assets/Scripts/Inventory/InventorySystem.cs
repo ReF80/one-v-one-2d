@@ -33,7 +33,7 @@ public class InventorySystem : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             int randomIndex = Random.Range(0, items.Count);
-            ItemData newItem = items[randomIndex];
+            var newItem = items[randomIndex];
             
             bool placed = false;
             while (!placed)

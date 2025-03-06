@@ -1,6 +1,5 @@
-using System.Collections;
+using System;
 using DefaultNamespace;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -23,7 +22,6 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragH
         }
         else
         {
-            iconImage.sprite = null;
             iconImage.enabled = true;
             iconImage.GetComponent<Image>().color = new Color32(255,255,225,0);
         }
@@ -31,9 +29,10 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragH
 
     public void RemoveItem()
     {
-        iconImage.sprite = null;
+        item = null;
         iconImage.enabled = true;
         iconImage.GetComponent<Image>().color = new Color32(255,255,225,0);
+        itemInfoPanel.itemInfoButtons.ExitButton();
     }
     
     public void OnBeginDrag(PointerEventData eventData)

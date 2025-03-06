@@ -6,7 +6,6 @@ public class Fire : MonoBehaviour
     {
         [SerializeField] public Enemy enemy;
         [SerializeField] public Player player;
-        [SerializeField] public Armor armor;
         [SerializeField] public EnemyHealthController enemyBar;
         [SerializeField] public PlayerHealthController playerBar;
         [SerializeField] private int enemyDamage = 15;
@@ -24,12 +23,12 @@ public class Fire : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (state)
             {
-                player.health.Remove(enemyDamage - armor.bodyArmor);
+                player.health.Remove(enemyDamage - player.armor.bodyArmor);
                 state = false;
             }
             else
             {
-                player.health.Remove(enemyDamage - armor.headArmor);
+                player.health.Remove(enemyDamage - player.armor.headArmor);
                 state = true;
             }
             

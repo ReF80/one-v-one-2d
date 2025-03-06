@@ -19,3 +19,4 @@ MonoBehaviour:
   weight: 1
   stack: 1
   maxStack: 6
+  btnAction: "\u041B\u0435\u0447\u0438\u0442\u044C"
