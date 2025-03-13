@@ -14,10 +14,11 @@ public class Health
     [field: SerializeField]
     public float MinValue { get; set; } = 0f;
 
-    public bool IsDead;
-
     public delegate void Respawn();
+    public delegate void AddH(float a, float b);
     public event Respawn OnDeath;
+    public event AddH OnAdd;
+    
         
     public void Add(float amount)
     {
@@ -27,6 +28,7 @@ public class Health
             newValue = MaxValue;
         }
         Value = newValue;
+        OnAdd?.Invoke(Value, MaxValue);
     }
 
     public void Remove(float amount)
@@ -34,7 +36,6 @@ public class Health
         float newValue = Value - amount;
         if (newValue < MinValue)
         {
-            IsDead = true;
             OnDeath?.Invoke();
         }
         else

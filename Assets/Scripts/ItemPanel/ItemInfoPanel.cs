@@ -42,17 +42,21 @@ namespace DefaultNamespace
         {
             player.armor.PutOn(itemData.value, itemData.type);
             armorController.BodyArmorTextController(itemData.value);
+            itemInfoButtons.ExitButton();
         }
 
         private void ActionHelmet()
         {
             player.armor.PutOn(itemData.value, itemData.type);
             armorController.HeadArmorTextController(itemData.value);
+            itemInfoButtons.ExitButton();
         }
         
         private void ActionMedkit()
         {
             player.health.Add(itemData.value);
+            itemInfoButtons.DeletButton();
+            itemInfoButtons.ExitButton();
         }
     }
 }

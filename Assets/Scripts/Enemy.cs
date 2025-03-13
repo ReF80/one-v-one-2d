@@ -20,7 +20,6 @@ namespace DefaultNamespace
             health.SetMaxValue();
             enemyHealthController.HealthController(health.Value, health.MaxValue);
             inventorySystem.GenerateRandomItems(1);
-            health.IsDead = false;
         }
     }
 }
